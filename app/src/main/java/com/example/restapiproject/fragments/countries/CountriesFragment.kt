@@ -95,4 +95,6 @@ class CountriesFragment : Fragment(R.layout.fragment_countries), NetworkListener
             adapter?.notifyDataSetChanged()
         }
     }
+
+    // this is fragment
 }
