@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/animation_to_fragments"
+    app:startDestination="@id/animationFragment">
+
+    <fragment
+        android:id="@+id/animationFragment"
+        android:name="com.example.restapiproject.fragments.animation.AnimationFragment"
+        android:label="AnimationFragment"
+        tools:layout="@layout/fragment_animation">
+
+        <action
+            android:id="@+id/action_animationFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/animation_to_fragments"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.restapiproject.fragments.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
+</navigation>
